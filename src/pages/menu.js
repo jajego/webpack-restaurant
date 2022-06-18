@@ -22,7 +22,17 @@ function createMenu() {
             name: 'Light & Breezy',
             price: '$11',
             description: 'Citrus from another planet. You have never felt a breeze like this.'
-        }
+        },
+        {
+            name: 'The Lordy Fordy',
+            price: '$15',
+            description: 'A 40oz microbrew with gold at the bottom of the bottle.'
+        },
+        {
+            name: 'Applepinenut',
+            price: '$9',
+            description: 'Just try it.'
+        },
     ];
     for(let i = 0; i < menuItems.length; i++) {
         menu.appendChild(createMenuItemCard(menuItems[i]));
@@ -34,6 +44,7 @@ function createMenuItemCard(item) {
     let card = document.createElement('div');
     card.classList.add('item-card')
     let name = document.createElement('h4');
+    name.classList.add('item-name');
     let price = document.createElement('p');
     let desc = document.createElement('p');
 

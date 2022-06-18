@@ -20,38 +20,88 @@
 body {
     height: 100vh;
     width: 100vw;
+    background-color: black;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+}
+
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #0c0c0c;
+    background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='%23000000' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.logo-landing,
+.title-landing {
+    transition-duration: 200ms;
+}
+
+.landing:hover .logo-landing {
+    transform: scale(1.1);
+}
+
+
+.landing:hover .title-landing {
+    margin-left: 10px;
+}
+
+.title-landing {
+    color: whitesmoke;
+    font-family: 'beam';
 }
 
 .header {
-    background-color: burlywood;
+    background-color: rgb(20, 20, 20);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 75px;
     width: 100%;
+    margin-bottom: 25px;
 }
 
+.bar-name {
+    color: whitesmoke;
+    font-size: 2.5rem;
+}
 
+.nav {
+    margin-right: 20px;
+}
+
+.navItem {
+    color: whitesmoke;
+}
+
+.navItem:hover {
+    margin-bottom: 1px;
+}
 
 #main {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: gray;
+    /* align-items: center;
+    justify-content: center; */
+    background: rgb(0, 0, 0);
     height: 1000px;
     width: 100%;
-
     font-family: 'nixie';
 }
 
 .home {
     display: flex;
     flex-direction: column;
-    height: 90%;
-    width: 90%;
-    align-items: center;
-    justify-content: space-around;
-    background-color: darkcyan;
+    height: 60%;
+    width: 60%;
+    /* align-items: center;
+    justify-content: space-around; */
+    background-color: white;
+    margin-left: 25px;
     padding: 30px;
 }
 
@@ -71,20 +121,78 @@ img {
 #menu {
     display: flex;
     flex-wrap: wrap;
-    width: 600px;
-    gap: 50px;
+    width: 1000px;
+    gap: 10px;
+    align-content: flex-start;
+    margin-left: 25px;
+    
+}
+
+#menu::before {
+    position: absolute;
+    content: 'drinks';
+    color: whitesmoke;
 }
 
 .item-card {
+    font-family:'Courier New', Courier, monospace;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 2px dashed black;
+    border: 4px dotted rgb(220, 171, 220);
     background-color: white;
-
+    margin-top: 50px;
     padding: 30px;
     height: 125px;
     width: 200px;
+    border-radius: 5%;
+}
+
+.item-name {
+    font-size: 1.2rem;
+}
+
+.contact {
+    height: 25%;
+    width: 40%;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+.contact::after {
+    content: 'Thank you for your message! We will get back to you as able.';
+    color: rgba(245, 222, 179, 0.378);
+    font-style: italic;
+    font-size: 0.75rem;    
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+label {
+    color: whitesmoke;
+    margin: 5px;
+    margin-left: 0;
+}
+
+input {
+    width: 450px;
+}
+
+button {
+    width: 75px;
+    border-radius: 50%;
+    margin-left: 380px;
+}
+
+#msg {
+    height: 200px;
+    margin-bottom: 15px;
 }
 
 .footer {

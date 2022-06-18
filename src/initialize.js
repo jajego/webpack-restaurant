@@ -1,3 +1,4 @@
+import loadLanding from './pages/landing';
 import loadHome from './pages/home';
 import loadMenu from './pages/menu';
 import loadContact from './pages/contact';
@@ -9,7 +10,7 @@ function createHeader() {
 
     let barName = document.createElement('p');
     barName.classList.add('bar-name');
-    barName.textContent = 'MOON BAR';
+    barName.textContent = 'BAR MOON';
     header.appendChild(barName);
 
     return header;
@@ -62,14 +63,24 @@ function createFooter() {
 function initialize() {
     let content = document.getElementById('content');
 
-    content.appendChild(createHeader());
-    createNav();
-    createNavLogic();
+    let entered = false;
+    loadLanding();
+    let landing = document.getElementById('landing');
+    let landingLogo = document.getElementById('logo-landing');
     
-    content.appendChild(createMain());
-    content.appendChild(createFooter());
+    landing.addEventListener('click', () => {
+        landing.remove();
+        landingLogo.remove();
+        
+        content.appendChild(createHeader());
+        createNav();
+        createNavLogic();
+        
+        content.appendChild(createMain());
+        content.appendChild(createFooter());
 
-    loadHome();
+        loadHome();
+    })
 }
 
 export default initialize;

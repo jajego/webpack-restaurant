@@ -8,7 +8,7 @@ function createHome() {
 
     const desc = document.createElement('p');
     desc.classList.add('desc');
-    desc.innerHTML = 'Description under construction\n Description under construction';
+    desc.innerHTML = 'BAR MOON BAR MOON BAR MOON BAR MOON BAR MOON BAR MOON\n BAR MOON BAR MOON BAR MOON BAR MOON BAR MOON BAR MOON\n BAR MOON BAR MOON BAR MOON BAR MOON BAR MOON BAR MOON\n BAR MOON BAR MOON BAR MOON BAR MOON BAR MOON BAR MOON\n ';
 
     home.appendChild(logo);
     home.appendChild(desc);
